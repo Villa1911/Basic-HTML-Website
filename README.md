@@ -1,2 +1,2 @@
 # Basic-HTML-Website
-I created a basic website combining HTML and CSS. I developed this project following the guidelines of [Roadmap.sh](https://roadmap.sh/projects/basic-html-website)
+I created a basic website combining HTML and CSS. I developed this project following the guidelines of [Roadmap.sh](https://roadmap.sh/projects/basic-html-website), where they originally asked to use only HTML. However, I decided to incorporate some CSS to get a look closer to the mockup they provided. For now, I have only implemented code in the index.html file. I plan to add content to the other web pages soon.
