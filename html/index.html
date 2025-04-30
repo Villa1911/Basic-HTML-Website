@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic HTML Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frontend developer portfolio with HTML, CSS, and layout skills">
+    <meta name="keywords" content="HTML, CSS, Frontend, Developer, Portfolio">
+    <meta name="author" content="Frontend Developer">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <style>
+        /* Estilos base */
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Navegación */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 60px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-left: 20px;
+            font-size: 16px;
+        }
+
+        nav a {
+            font-weight: 500;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        nav a:hover:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-text {
+            margin-left: 10px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        /* Sección de presentación */
+        .presentation {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .presentation h1 {
+            font-size: 42px;
+            text-align: center;
+            margin: 0 0 15px 0;
+            font-weight: 700;
+        }
+
+        .presentation p {
+            font-size: 16px;
+            text-align: center;
+            margin: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Estructura de tres columnas */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .three-column-container {
+            display: flex;
+            border-top: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+            margin: 40px 0;
+        }
+
+        .column {
+            flex: 1;
+            padding: 25px;
+            border-right: 1px solid #000000;
+        }
+
+        .column:last-child {
+            border-right: none;
+        }
+
+        .column h2 {
+            font-size: 24px;
+            margin: 0 0 25px 0;
+            font-weight: 600;
+        }
+
+        .column h3 {
+            font-size: 18px;
+            margin: 15px 0 5px;
+            font-weight: 500;
+        }
+
+        /* Estilos para la columna de proyectos */
+        .project-item {
+            padding: 12px 0;
+            border-bottom: 1px solid #000000;
+        }
+
+        .project-item:hover {
+            padding-left: 5px;
+        }
+
+        .project-item:last-child {
+            border-bottom: none;
+        }
+
+        .project-item a {
+            color: #333;
+            display: block;
+            font-weight: 400;
+        }
+
+        /* Estilos para la columna de experiencia */
+        .work-item {
+            border-bottom: 1px solid #000000;
+            padding: 20px 0;
+        }
+
+        .work-item:last-child {
+            border-bottom: none;
+        }
+
+        .work-item h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .work-item p {
+            margin: 8px 0;
+        }
+
+        .profile-link {
+            display: inline-block;
+            margin-top: 8px;
+            font-weight: 500;
+        }
+
+        /* Estilos para la columna de educación */
+        .education p {
+            margin-bottom: 20px;
+        }
+
+        .courses-list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .courses-list li {
+            padding: 5px 0;
+        }
+
+        .courses-list li:before {
+            content: "- ";
+            color: #000000;
+        }
+
+        /* Testimonios */
+        .section-title {
+            font-size: 24px;
+            margin: 40px 0 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .three-bubbles {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 0 40px;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .reviews {
+            border: 1px solid #000000;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 10px 0;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="brand">
+                <div class="logo">
+                    <img src="/BasicHTMLWebsite/images/star.png" alt="Estrella" width="25" height="25">
+                </div>
+                <div class="logo-text">Basic HTML Website</div>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="presentation">
+            <h1>Frontend Developer</h1>
+            <p>html only with proper layout and styling</p>
+        </section>
+    
+        <div class="three-column-container">
+            <div class="column projects">
+                <h2>Projects</h2>
+                <div class="project-item">
+                    <a href="#">HTML Only Portfolio</a>
+                </div>
+                <div class="project-item">
+                    <a href="#">Calculator</a>
+                </div>
+                <div class="project-item">
+                    <a href="#">Quiz App</a>
+                </div>
+                <div class="project-item">
+                    <a href="#">Countdown Timer</a>
+                </div>
+                <div class="project-item">
+                    <a href="#">Product Upcoming</a>
+                </div>
+            </div>
+            
+            <div class="column work-experience">
+                <h2>Work Experience</h2>
+
+                <div class="work-item">
+                    <h3>roadmap.sh</h3>
+                    <p>Solved all the frontend projects</p>
+                    <a href="#" class="profile-link">Visit my Profile</a>
+                </div>
+
+                <div class="work-item">
+                    <h3>OpenSource Work</h3>
+                    <p>Contributed to 50 opensource projects. Made my own projects with 200 GitHub Stars.</p>
+                    <a href="https://github.com/Villa1911" class="profile-link">Visit my GitHub Profile</a>
+                </div>
+            </div>
+
+            <div class="column education">
+                <h2>Education</h2>
+                <p>Graduated with 3.76 out of 4 CGPA. Won Acme Hackathon. Organized 30 sessions.</p>
+
+                <h3>Courses I took:</h3>
+                <ul class="courses-list">
+                    <li>Object Oriented Programming</li>
+                    <li>Data Structures and Algorithms</li>
+                    <li>Web Engineering</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Human Computer Interaction</li>
+                    <li>Computer Graphics</li>
+                    <li>Database Management Systems</li>
+                    <li>Distributed Database Systems</li>
+                    <li>Discreet Mathematics</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="section-title">Reviews from my Teachers</h2>
+        <div class="three-bubbles">
+            <div class="reviews">
+                <p>John doe was a brilliant student; always stood out with his assignments.</p>
+                <p>Jane Doe<br>Assistant Professor</p>
+            </div>
+
+            <div class="reviews">
+                <p>An exceptional talent with great attention to detail and problem-solving skills.</p>
+                <p>Robert Smith<br>Head of Department</p>
+            </div>
+
+            <div class="reviews">
+                <p>One of the most dedicated students I've taught. His projects were always innovative.</p>
+                <p>Maria Johnson<br>Senior Professor</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div style="text-align: center; padding: 20px; margin-top: 40px; font-size: 14px;">
+            &copy; 2025 Frontend Developer Portfolio. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
